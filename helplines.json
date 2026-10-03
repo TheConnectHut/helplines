@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-02 17:32",
+  "generatedAt": "2026-10-03 15:09",
   "verifiedOn": "2026-10-01",
   "settings": {
     "title": "Helplines Directory",
@@ -11,7 +11,9 @@
     "Bengali",
     "English",
     "Hindi",
-    "Marathi"
+    "Malayalam",
+    "Marathi",
+    "Tamil"
   ],
   "helplines": [
     {
@@ -130,7 +132,7 @@
       "hours": "Every day, 10 am – 6 pm",
       "tollFree": false,
       "heroRank": 4,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-03"
     },
     {
       "name": "Lifeline Foundation",
@@ -288,8 +290,8 @@
       "location": "Trivandrum",
       "address": "",
       "languages": [
-        "Hindi",
-        "English"
+        "English",
+        "Malayalam"
       ],
       "days": [
         0,
@@ -305,7 +307,7 @@
       "hours": "Every day, 24 hours",
       "tollFree": false,
       "heroRank": 12,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-03"
     },
     {
       "name": "Sneha Foundation",
@@ -317,8 +319,8 @@
       "location": "Chennai",
       "address": "",
       "languages": [
-        "Hindi",
-        "English"
+        "English",
+        "Tamil"
       ],
       "days": [
         0,
@@ -334,7 +336,7 @@
       "hours": "Every day, 10 am – 10 pm",
       "tollFree": false,
       "heroRank": 2,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-03"
     },
     {
       "name": "Sumaitri",
