@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03 15:09",
+  "generatedAt": "2026-10-03 15:13",
   "verifiedOn": "2026-10-01",
   "settings": {
     "title": "Helplines Directory",
@@ -203,7 +203,7 @@
       "location": "Erode, Tamil Nadu",
       "address": "",
       "languages": [
-        "Hindi",
+        "Tamil",
         "English"
       ],
       "days": [
@@ -215,9 +215,9 @@
         5,
         6
       ],
-      "from": 720,
+      "from": 600,
       "to": 1200,
-      "hours": "Every day, 12 pm – 8 pm",
+      "hours": "Every day, 10 am – 8 pm",
       "tollFree": false,
       "heroRank": 9,
       "lastVerified": "2026-10-01"
