@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03 15:13",
+  "generatedAt": "2026-10-22 11:21",
   "verifiedOn": "2026-10-01",
   "settings": {
     "title": "Helplines Directory",
@@ -331,9 +331,9 @@
         5,
         6
       ],
-      "from": 600,
+      "from": 480,
       "to": 1320,
-      "hours": "Every day, 10 am – 10 pm",
+      "hours": "Every day, 8 am – 10 pm",
       "tollFree": false,
       "heroRank": 2,
       "lastVerified": "2026-10-03"
