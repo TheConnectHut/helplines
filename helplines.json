@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23 16:13",
+  "generatedAt": "2026-10-23 17:16",
   "verifiedOn": "2026-10-22",
   "settings": {
     "title": "Helplines Directory",
@@ -10,7 +10,9 @@
   "languages": [
     "Bengali",
     "English",
+    "Gujarati",
     "Hindi",
+    "Konkani",
     "Malayalam",
     "Marathi",
     "Regional Languages",
@@ -24,7 +26,7 @@
       "whatsapp": "",
       "email": "hello@ankaheehelpline.org",
       "website": "https://ankaheehelpline.org/",
-      "location": "Mumbai",
+      "location": "Mumbai, Maharashtra",
       "address": "",
       "languages": [
         "Hindi",
@@ -54,7 +56,7 @@
       "whatsapp": "",
       "email": "distressmailsconnecting@gmail.com",
       "website": "http://www.connectingngo.org/",
-      "location": "Pune",
+      "location": "Pune, Maharashtra",
       "address": "",
       "languages": [
         "Hindi",
@@ -87,9 +89,8 @@
       "location": "Goa",
       "address": "",
       "languages": [
-        "Hindi",
         "English",
-        "Marathi"
+        "Konkani"
       ],
       "days": [
         1,
@@ -112,7 +113,7 @@
       "whatsapp": "",
       "email": "jeevanjamshedpur@gmail.com",
       "website": "https://jeevanhelplinesuicideprevention.blogspot.com/",
-      "location": "Jamshedpur",
+      "location": "Jamshedpur, Jharkhand",
       "address": "",
       "languages": [
         "Hindi",
@@ -136,13 +137,42 @@
       "lastVerified": "2026-10-22"
     },
     {
+      "name": "Life Bridge Suicide Prevention Centre",
+      "phone": "4952760000",
+      "altPhone": "9495714262",
+      "whatsapp": "",
+      "email": "thanal.calicut@gmail.com",
+      "website": "https://www.drpnsureshkumar.com/thanal.html",
+      "location": "Kozhikode, Kerala",
+      "address": "",
+      "languages": [
+        "Hindi",
+        "English"
+      ],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "from": 600,
+      "to": 1080,
+      "hours": "Every day, 10 am – 6 pm",
+      "tollFree": false,
+      "heroRank": 13,
+      "lastVerified": "2026-10-22"
+    },
+    {
       "name": "Lifeline Foundation",
       "phone": "9088030303",
       "altPhone": "",
       "whatsapp": "",
       "email": "lifelinekolkata@gmail.com",
       "website": "http://www.lifelinefoundation.in/",
-      "location": "Kolkata",
+      "location": "Kolkata, West Bengal",
       "address": "",
       "languages": [
         "Hindi",
@@ -172,7 +202,7 @@
       "whatsapp": "",
       "email": "maithrihelp@gmail.com",
       "website": "http://www.maithrikochi.in/",
-      "location": "Kochi",
+      "location": "Kochi, Kerala",
       "address": "",
       "languages": [
         "Malayalam"
@@ -194,8 +224,8 @@
       "lastVerified": "2026-10-22"
     },
     {
-      "name": "Nesam",
-      "phone": "4242220022",
+      "name": "NESAM Manathin Maiyam Foundation",
+      "phone": "04242220022",
       "altPhone": "",
       "whatsapp": "",
       "email": "",
@@ -229,7 +259,7 @@
       "whatsapp": "",
       "email": "roshnihelp@gmail.com",
       "website": "http://www.roshinitrust.com/",
-      "location": "Hyderabad",
+      "location": "Hyderabad, Telangana",
       "address": "",
       "languages": [
         "Hindi",
@@ -253,16 +283,17 @@
     },
     {
       "name": "Saath Suicide Prevention Centre",
-      "phone": "7926305544",
-      "altPhone": "",
+      "phone": "917926300222",
+      "altPhone": "917926305544",
       "whatsapp": "",
       "email": "saath12@yahoo.com",
       "website": "http://www.saathindia.org/",
-      "location": "Ahmedabad",
+      "location": "Ahmedabad, Gujarat",
       "address": "",
       "languages": [
         "Hindi",
-        "English"
+        "English",
+        "Gujarati"
       ],
       "days": [
         0,
@@ -287,10 +318,9 @@
       "whatsapp": "",
       "email": "sanjeevanitrivandrum@gmail.com",
       "website": "http://www.sanjeevanitrivandrum.com/",
-      "location": "Trivandrum",
+      "location": "Trivandrum, Kerala",
       "address": "",
       "languages": [
-        "English",
         "Malayalam"
       ],
       "days": [
@@ -316,7 +346,7 @@
       "whatsapp": "",
       "email": "help@snehaindia.org",
       "website": "https://snehaindia.org/new/",
-      "location": "Chennai",
+      "location": "Chennai, Tamil Nadu",
       "address": "",
       "languages": [
         "English",
@@ -340,8 +370,8 @@
     },
     {
       "name": "Sumaitri",
-      "phone": "1146018404",
-      "altPhone": "9315767849",
+      "phone": "9315767849",
+      "altPhone": "1146018404",
       "whatsapp": "",
       "email": "feelingsuicidal@sumaitri.net",
       "website": "https://sumaitri.net/",
@@ -395,35 +425,6 @@
       "hours": "Every day, 24 hours",
       "tollFree": false,
       "heroRank": 14,
-      "lastVerified": "2026-10-22"
-    },
-    {
-      "name": "Thanal Crisis Intervention and Suicide Prevention Research Centre",
-      "phone": "4952760000",
-      "altPhone": "",
-      "whatsapp": "",
-      "email": "thanal.calicut@gmail.com",
-      "website": "https://www.drpnsureshkumar.com/thanal.html",
-      "location": "Calicut",
-      "address": "",
-      "languages": [
-        "Hindi",
-        "English"
-      ],
-      "days": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        6
-      ],
-      "from": 600,
-      "to": 1080,
-      "hours": "Every day, 10 am – 6 pm",
-      "tollFree": false,
-      "heroRank": 13,
       "lastVerified": "2026-10-22"
     }
   ]
