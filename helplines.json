@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23 17:24",
+  "generatedAt": "2026-10-23 17:32",
   "verifiedOn": "2026-10-22",
   "settings": {
     "title": "Helplines Directory",
@@ -138,16 +138,16 @@
     },
     {
       "name": "Life Bridge Suicide Prevention Centre",
-      "phone": "04952760000",
-      "altPhone": "9495714262",
+      "phone": "9495714262",
+      "altPhone": "",
       "whatsapp": "",
       "email": "thanal.calicut@gmail.com",
-      "website": "https://www.drpnsureshkumar.com/thanal.html",
+      "website": "https://lifebridgesuicidepreventioncentre.com/",
       "location": "Kozhikode, Kerala",
       "address": "",
       "languages": [
-        "Hindi",
-        "English"
+        "English",
+        "Malayalam"
       ],
       "days": [
         0,
