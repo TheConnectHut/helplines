@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-22 11:23",
-  "verifiedOn": "2026-10-01",
+  "generatedAt": "2026-10-23 16:13",
+  "verifiedOn": "2026-10-22",
   "settings": {
     "title": "Helplines Directory",
     "subtitle": "Someone to talk to, right now",
@@ -13,6 +13,7 @@
     "Hindi",
     "Malayalam",
     "Marathi",
+    "Regional Languages",
     "Tamil"
   ],
   "helplines": [
@@ -44,7 +45,7 @@
       "hours": "Every day, 4 pm – 12 am",
       "tollFree": false,
       "heroRank": 1,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Connecting Trust",
@@ -74,7 +75,7 @@
       "hours": "Every day, 10 am – 8 pm",
       "tollFree": false,
       "heroRank": 3,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "COOJ Mental Health Foundation",
@@ -102,7 +103,7 @@
       "hours": "Mon–Fri, 1 pm – 7 pm",
       "tollFree": false,
       "heroRank": 6,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Jeevan Suicide Prevention Centre",
@@ -132,7 +133,7 @@
       "hours": "Every day, 10 am – 6 pm",
       "tollFree": false,
       "heroRank": 4,
-      "lastVerified": "2026-10-03"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Lifeline Foundation",
@@ -162,7 +163,7 @@
       "hours": "Every day, 10 am – 10 pm",
       "tollFree": false,
       "heroRank": 7,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Maithri",
@@ -174,8 +175,7 @@
       "location": "Kochi",
       "address": "",
       "languages": [
-        "Hindi",
-        "English"
+        "Malayalam"
       ],
       "days": [
         0,
@@ -191,7 +191,7 @@
       "hours": "Every day, 10 am – 7 pm",
       "tollFree": false,
       "heroRank": 5,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Nesam",
@@ -220,7 +220,7 @@
       "hours": "Every day, 10 am – 8 pm",
       "tollFree": false,
       "heroRank": 9,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Roshini",
@@ -249,7 +249,7 @@
       "hours": "Every day, 11 am – 9 pm",
       "tollFree": false,
       "heroRank": 8,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Saath Suicide Prevention Centre",
@@ -278,7 +278,7 @@
       "hours": "Every day, 1 pm – 7 pm",
       "tollFree": false,
       "heroRank": 11,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Sanjeevani",
@@ -307,7 +307,7 @@
       "hours": "Every day, 24 hours",
       "tollFree": false,
       "heroRank": 12,
-      "lastVerified": "2026-10-03"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Sneha Foundation",
@@ -336,7 +336,7 @@
       "hours": "Every day, 8 am – 10 pm",
       "tollFree": false,
       "heroRank": 2,
-      "lastVerified": "2026-10-03"
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Sumaitri",
@@ -365,7 +365,37 @@
       "hours": "Every day, 12:30 pm – 5 pm",
       "tollFree": false,
       "heroRank": 10,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
+    },
+    {
+      "name": "Tele MANAS",
+      "phone": "18008914416",
+      "altPhone": "",
+      "whatsapp": "",
+      "email": "",
+      "website": "https://telemanas.mohfw.gov.in/home",
+      "location": "Pan India (All 28 States & 8 Union Territories)",
+      "address": "",
+      "languages": [
+        "English",
+        "Regional Languages",
+        "Hindi"
+      ],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "from": 0,
+      "to": 1440,
+      "hours": "Every day, 24 hours",
+      "tollFree": false,
+      "heroRank": 14,
+      "lastVerified": "2026-10-22"
     },
     {
       "name": "Thanal Crisis Intervention and Suicide Prevention Research Centre",
@@ -394,7 +424,7 @@
       "hours": "Every day, 10 am – 6 pm",
       "tollFree": false,
       "heroRank": 13,
-      "lastVerified": "2026-10-01"
+      "lastVerified": "2026-10-22"
     }
   ]
 }
