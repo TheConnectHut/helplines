@@ -6,7 +6,7 @@ TEL;TYPE=WORK,VOICE:8655486966
 EMAIL;TYPE=INTERNET:hello@ankaheehelpline.org
 URL:https://ankaheehelpline.org/
 NOTE:Hours: Every day\, 4 pm – 12 am\nLanguages: Hindi\, English\, Marath
- i\nLocation: Mumbai\nDetails checked 2026-10-01
+ i\nLocation: Mumbai\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -17,7 +17,7 @@ TEL;TYPE=WORK,VOICE:9922004305
 EMAIL;TYPE=INTERNET:distressmailsconnecting@gmail.com
 URL:http://www.connectingngo.org/
 NOTE:Hours: Every day\, 10 am – 8 pm\nLanguages: Hindi\, English\, Marath
- i\nLocation: Pune\nDetails checked 2026-10-01
+ i\nLocation: Pune\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -27,7 +27,7 @@ TEL;TYPE=WORK,VOICE:6361612525
 EMAIL;TYPE=INTERNET:youmatterbycooj@gmail.com
 URL:http://www.cooj.co.in/
 NOTE:Hours: Mon–Fri\, 1 pm – 7 pm\nLanguages: Hindi\, English\, Marathi\n
- Location: Goa\nDetails checked 2026-10-01
+ Location: Goa\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -38,7 +38,7 @@ TEL;TYPE=WORK,VOICE:9297777500
 EMAIL;TYPE=INTERNET:jeevanjamshedpur@gmail.com
 URL:https://jeevanhelplinesuicideprevention.blogspot.com/
 NOTE:Hours: Every day\, 10 am – 6 pm\nLanguages: Hindi\, English\, Bengal
- i\nLocation: Jamshedpur\nDetails checked 2026-10-03
+ i\nLocation: Jamshedpur\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -48,7 +48,7 @@ TEL;TYPE=WORK,VOICE:9088030303
 EMAIL;TYPE=INTERNET:lifelinekolkata@gmail.com
 URL:http://www.lifelinefoundation.in/
 NOTE:Hours: Every day\, 10 am – 10 pm\nLanguages: Hindi\, English\, Benga
- li\nLocation: Kolkata\nDetails checked 2026-10-01
+ li\nLocation: Kolkata\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -57,8 +57,8 @@ N:Helpline – Maithri;;;;
 TEL;TYPE=WORK,VOICE:04842540530
 EMAIL;TYPE=INTERNET:maithrihelp@gmail.com
 URL:http://www.maithrikochi.in/
-NOTE:Hours: Every day\, 10 am – 7 pm\nLanguages: Hindi\, English\nLocatio
- n: Kochi\nDetails checked 2026-10-01
+NOTE:Hours: Every day\, 10 am – 7 pm\nLanguages: Malayalam\nLocation: Koc
+ hi\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -67,7 +67,7 @@ N:Helpline – Nesam;;;;
 TEL;TYPE=WORK,VOICE:4242220022
 URL:http://www.nesam.in/
 NOTE:Hours: Every day\, 10 am – 8 pm\nLanguages: Tamil\, English\nLocatio
- n: Erode\, Tamil Nadu\nDetails checked 2026-10-01
+ n: Erode\, Tamil Nadu\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -78,7 +78,7 @@ TEL;TYPE=WORK,VOICE:8142020044
 EMAIL;TYPE=INTERNET:roshnihelp@gmail.com
 URL:http://www.roshinitrust.com/
 NOTE:Hours: Every day\, 11 am – 9 pm\nLanguages: Hindi\, English\nLocatio
- n: Hyderabad\nDetails checked 2026-10-01
+ n: Hyderabad\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -88,7 +88,7 @@ TEL;TYPE=WORK,VOICE:7926305544
 EMAIL;TYPE=INTERNET:saath12@yahoo.com
 URL:http://www.saathindia.org/
 NOTE:Hours: Every day\, 1 pm – 7 pm\nLanguages: Hindi\, English\nLocation
- : Ahmedabad\nDetails checked 2026-10-01
+ : Ahmedabad\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -99,7 +99,7 @@ TEL;TYPE=WORK,VOICE:4712533900
 EMAIL;TYPE=INTERNET:sanjeevanitrivandrum@gmail.com
 URL:http://www.sanjeevanitrivandrum.com/
 NOTE:Hours: Every day\, 24 hours\nLanguages: English\, Malayalam\nLocatio
- n: Trivandrum\nDetails checked 2026-10-03
+ n: Trivandrum\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -110,7 +110,7 @@ TEL;TYPE=WORK,VOICE:4424640060
 EMAIL;TYPE=INTERNET:help@snehaindia.org
 URL:https://snehaindia.org/new/
 NOTE:Hours: Every day\, 8 am – 10 pm\nLanguages: English\, Tamil\nLocatio
- n: Chennai\nDetails checked 2026-10-03
+ n: Chennai\nDetails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -121,7 +121,17 @@ TEL;TYPE=WORK,VOICE:9315767849
 EMAIL;TYPE=INTERNET:feelingsuicidal@sumaitri.net
 URL:https://sumaitri.net/
 NOTE:Hours: Every day\, 12:30 pm – 5 pm\nLanguages: Hindi\, English\nLoca
- tion: New Delhi\nDetails checked 2026-10-01
+ tion: New Delhi\nDetails checked 2026-10-22
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Helpline – Tele MANAS
+N:Helpline – Tele MANAS;;;;
+TEL;TYPE=WORK,VOICE:18008914416
+URL:https://telemanas.mohfw.gov.in/home
+NOTE:Hours: Every day\, 24 hours\nLanguages: English\, Regional Languages
+ \, Hindi\nLocation: Pan India (All 28 States & 8 Union Territories)\nDet
+ ails checked 2026-10-22
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
@@ -133,5 +143,5 @@ TEL;TYPE=WORK,VOICE:4952760000
 EMAIL;TYPE=INTERNET:thanal.calicut@gmail.com
 URL:https://www.drpnsureshkumar.com/thanal.html
 NOTE:Hours: Every day\, 10 am – 6 pm\nLanguages: Hindi\, English\nLocatio
- n: Calicut\nDetails checked 2026-10-01
+ n: Calicut\nDetails checked 2026-10-22
 END:VCARD
