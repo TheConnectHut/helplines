@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23 17:23",
+  "generatedAt": "2026-10-23 17:24",
   "verifiedOn": "2026-10-22",
   "settings": {
     "title": "Helplines Directory",
@@ -250,6 +250,34 @@
       "hours": "Every day, 10 am – 8 pm",
       "tollFree": false,
       "heroRank": 9,
+      "lastVerified": "2026-10-22"
+    },
+    {
+      "name": "Pratheeksha",
+      "phone": "8547158830",
+      "altPhone": "4842448830",
+      "whatsapp": "",
+      "email": "",
+      "website": "",
+      "location": "Paravur, Kerala",
+      "address": "",
+      "languages": [
+        "Malayalam"
+      ],
+      "days": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "from": 600,
+      "to": 1080,
+      "hours": "Every day, 10 am – 6 pm",
+      "tollFree": false,
+      "heroRank": 15,
       "lastVerified": "2026-10-22"
     },
     {
