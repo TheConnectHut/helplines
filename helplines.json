@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-23 17:50",
+  "generatedAt": "2026-10-24 13:17",
   "verifiedOn": "2026-10-22",
   "settings": {
     "title": "Helplines Directory",
@@ -311,8 +311,8 @@
     },
     {
       "name": "Saath Suicide Prevention Centre",
-      "phone": "7926300222",
-      "altPhone": "917926305544",
+      "phone": "917926305544",
+      "altPhone": "",
       "whatsapp": "",
       "email": "saath12@yahoo.com",
       "website": "http://www.saathindia.org/",
