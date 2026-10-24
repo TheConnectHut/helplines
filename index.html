@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#4D4845">
 <title>Helplines</title>
-<!-- v5 changes (v4 file keeps the original): F15 TCH colour theme (orange + charcoal, replaces the plum look; delete the F15 block to get plum back),
+<!-- v6 change (v5 file keeps the original): F17 language chips wrap onto extra lines on laptops (mouse), phones keep the swipeable row.
+     v5 changes (v4 file keeps the original): F15 TCH colour theme (orange + charcoal, replaces the plum look; delete the F15 block to get plum back),
      F16 solid green "Open" pill with white text (delete the F16 block to get the light green back).
      v4 change (v3 file keeps the original): F5 header, logo 100px wide beside the title (row layout).
      v3 change (v2 file keeps the original): F5 header, logo bigger and the header scrolls away.
@@ -200,6 +201,15 @@
      Dependencies: F6 renders the .status.open element. To remove: delete this block, the light green pill returns. */
   .status.open { background: #2F7A52; color: #fff; }
   .status.open::before { background: #fff; }
+
+  /* ============ FEATURE F17 — Language chips wrap on mouse devices ============
+     Status: Modified (of F10, v6). A mouse cannot swipe, so on a laptop the single swipeable row cut off the last languages.
+       On devices with a mouse/trackpad the row now wraps onto extra lines; phones (touch) keep the one swipeable row.
+     Validation: none. Calculation: none.
+     Dependencies: F10 (.chip-scroll). To remove: delete this block (laptops go back to the cut-off row). */
+  @media (hover: hover) and (pointer: fine) {
+    .chip-scroll { flex-wrap: wrap; overflow-x: visible; margin: 0 0 16px; padding: 0; }
+  }
 </style>
 </head>
 <body>
