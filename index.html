@@ -3,9 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#5B4B7C">
+<meta name="theme-color" content="#4D4845">
 <title>Helplines</title>
-<!-- v4 change (v3 file keeps the original): F5 header, logo 100px wide beside the title (row layout).
+<!-- v5 changes (v4 file keeps the original): F15 TCH colour theme (orange + charcoal, replaces the plum look; delete the F15 block to get plum back),
+     F16 solid green "Open" pill with white text (delete the F16 block to get the light green back).
+     v4 change (v3 file keeps the original): F5 header, logo 100px wide beside the title (row layout).
      v3 change (v2 file keeps the original): F5 header, logo bigger and the header scrolls away.
      Pair it with the tightly cropped images/logo.jpg (the old image was 84% empty margin).
      v2 changes (v1 file keeps the originals): F12b add-to-home-screen removed (no manifest or touch icon, so no
@@ -170,6 +172,34 @@
   .sheet h3 { margin: 0 0 10px; font-size: 18px; }
   .sheet p { margin: 0 0 12px; font-size: 16px; line-height: 1.5; }
   .sheet .btn { margin-top: 6px; }
+
+  /* ============ FEATURE F15 — TCH colour theme ============
+     Status: New (v5). Departs on purpose from the Ankahee design tokens above (user-chosen option E).
+     Validation: none. Calculation: none.
+     Contrast (measured): charcoal text on orange button 4.35:1 at bold 16px+ -> using ink #2E2A33 on orange 6.78:1;
+       white on charcoal chip >= 9:1. Orange is used only as a filled button background, never for text, links or thin lines
+       (orange on white/ivory is about 2:1).
+     Dependencies: the tokens block above (this block only overrides). To remove: delete this whole block, the plum look returns. */
+  :root {
+    --accent: #FA9D74;
+    --accent-press: #F08A5C;
+    --accent-ink: #2E2A33;
+    --primary: #4D4845;
+    --primary-dark: #3A3633;
+    --primary-soft: #FDEBE1;
+    --text-muted: #6A646F; /* was #7A7480: 3.9-4.2:1 on ivory/peach, now above 4.5:1 */
+  }
+  .btn-primary { background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+  .btn-primary:active { background: var(--accent-press); }
+  .chip.selected { background: var(--primary); border-color: var(--primary); color: #fff; }
+  .tag-loc { border-color: var(--primary); color: var(--primary-dark); }
+
+  /* ============ FEATURE F16 — Green "Open" pill ============
+     Status: New (v5). Validation: none. Calculation: none.
+     Contrast (measured): white on #2F7A52 = 5.22:1 (AA).
+     Dependencies: F6 renders the .status.open element. To remove: delete this block, the light green pill returns. */
+  .status.open { background: #2F7A52; color: #fff; }
+  .status.open::before { background: #fff; }
 </style>
 </head>
 <body>
