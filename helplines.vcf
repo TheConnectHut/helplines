@@ -81,6 +81,14 @@ NOTE:Hours: Every day\, 10 am – 8 pm\nLanguages: Tamil\, English\nLocatio
 END:VCARD
 BEGIN:VCARD
 VERSION:3.0
+FN:Helpline – Outlive Chat Helpline
+N:Helpline – Outlive Chat Helpline;;;;
+URL:https://chat.outlive.in/landing-page
+NOTE:Chat hours: Mon–Sat\, 3 pm – 9 pm\nLanguages: Hindi\, English\, Mara
+ thi\nLocation: Online\nDetails checked 2026-10-22
+END:VCARD
+BEGIN:VCARD
+VERSION:3.0
 FN:Helpline – Pratheeksha
 N:Helpline – Pratheeksha;;;;
 TEL;TYPE=WORK,VOICE:8547158830
