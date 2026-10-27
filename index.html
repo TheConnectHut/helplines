@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#4D4845">
 <title>Helplines</title>
-<!-- v6 change (v5 file keeps the original): F17 language chips wrap onto extra lines on laptops (mouse), phones keep the swipeable row.
+<!-- v7 change (v6 file keeps the original): F19 chat channel - Chat button, separate chat hours, chat-only helplines (needs helplines.json from export script v2; WhatsApp button replaced by Chat).
+     v6 change (v5 file keeps the original): F17 language chips wrap onto extra lines on laptops (mouse), phones keep the swipeable row.
      v5 changes (v4 file keeps the original): F15 TCH colour theme (orange + charcoal, replaces the plum look; delete the F15 block to get plum back),
      F16 solid green "Open" pill with white text (delete the F16 block to get the light green back).
      v4 change (v3 file keeps the original): F5 header, logo 100px wide beside the title (row layout).
@@ -291,7 +292,7 @@ function fmtDateStr(s) {
         UNVERIFIED — NEEDS CONFIRMATION
      C8 Sort (closed) — soonest to open first, then alphabetical.
         UNVERIFIED — NEEDS CONFIRMATION
-   Dependencies: helplines.json fields days[], from, to (F2). Time always taken in IST,
+   Dependencies: helplines.json fields days[], from, to (F2); v7: applied per channel by F19. Time always taken in IST,
      from the visitor's clock, so a device in another time zone still gets the right answer.
    ==================================================================== */
 const IST_FMT = new Intl.DateTimeFormat('en-US', {
@@ -363,7 +364,8 @@ function opensLabel(h, now, delta) {
   return 'Opens ' + DAY_SHORT[(now.dow + off) % 7] + ' ' + t;
 }
 
-function statusOf(h, now) {
+// v7: this is the single-window status (a window = { days, from, to }). statusOf (F19) combines the phone and chat windows.
+function windowStatus(h, now) {
   if (minutesIntoWindow(h, now.w) >= 0) {
     return is247(h)
       ? { open: true, is247: true, text: 'Open · 24 hours' }
@@ -382,6 +384,62 @@ function splitAndSort(list) {
   return { open: open, closed: closed };
 }
 /* ===== end FEATURE F6 ===== */
+
+/* ====================================================================
+   FEATURE F19 — Chat channel
+   Status: New (v7). Delta: a helpline can have a phone, a chat link, or both, each with its own hours (days are shared).
+     Replaces the WhatsApp button. Changes F6 (statusOf combines the two windows; the old single-window version is now windowStatus)
+     and F8 (cardHtml picks the main button and the hours rows through the helpers below).
+   Validation: a channel exists only if its fields are in helplines.json (phone + from/to; chat + chatFrom/chatTo).
+     All values HTML-escaped. The export (F18) guarantees at least one channel.
+   Calculation (CONFIRMED by user, 27 Oct):
+     A helpline is open if either channel is open. The main (big) button is the channel that is open now:
+       both open -> Call; only chat open -> Chat; only phone open -> Call; both closed -> Call (or Chat if chat-only), shown outlined.
+     Pill text: phone window text when the phone is open; "Chat open · till 1 am" when only chat is open (and a phone exists);
+       when closed, the earliest next opening ("Chat opens 7 pm" only if chat opens first and a phone exists).
+     Hero and sort order use this combined status, so a chat-only line can be the hero (user decision).
+   Dependencies: F6, F8, F7; helplines.json phone, from, to, chat, chatFrom, chatTo, hours, chatHours (F18).
+   To remove: delete this block, rename windowStatus back to statusOf, and restore the v6 lines marked "F19" in cardHtml.
+   ==================================================================== */
+function hasPhone(h) { return typeof h.from === 'number'; }
+function hasChat(h) { return !!h.chat && typeof h.chatFrom === 'number'; }
+function phoneWin(h) { return { days: h.days, from: h.from, to: h.to }; }
+function chatWin(h) { return { days: h.days, from: h.chatFrom, to: h.chatTo }; }
+
+function statusOf(h, now) {
+  const p = hasPhone(h) ? windowStatus(phoneWin(h), now) : null;
+  const c = hasChat(h) ? windowStatus(chatWin(h), now) : null;
+  if (!p && !c) return { open: false, is247: false, delta: Infinity, text: '', phoneOpen: false, chatOpen: false };
+  const flags = { phoneOpen: !!(p && p.open), chatOpen: !!(c && c.open) };
+  if (!c) return Object.assign({}, p, flags);
+  if (!p) return Object.assign({}, c, flags);
+  if (p.open) return Object.assign({}, p, flags);
+  if (c.open) return Object.assign({}, c, flags, { text: c.text.replace(/^Open/, 'Chat open') });
+  return c.delta < p.delta
+    ? Object.assign({}, c, flags, { text: c.text.replace(/^Opens/, 'Chat opens') })
+    : Object.assign({}, p, flags);
+}
+
+function callButtonHtml(h, cls) {
+  return '<a class="' + cls + '" href="tel:' + esc(h.phone) + '">Call ' + esc(fmtPhone(h.phone)) + '</a>';
+}
+function chatButtonHtml(h, cls) {
+  return '<a class="' + cls + '" href="' + esc(h.chat) + '" target="_blank" rel="noopener">Chat</a>';
+}
+// true when the big button should be Chat: chat-only line, or the phone is closed while chat is open
+function chatIsMain(h, st) { return hasChat(h) && (!hasPhone(h) || (!st.phoneOpen && st.chatOpen)); }
+
+function hoursRowsHtml(h) {
+  if (hasPhone(h) && hasChat(h)) {
+    return h.hours === h.chatHours
+      ? '<dt>Hours</dt><dd>' + esc(h.hours) + '</dd>'
+      : '<dt>Phone hours</dt><dd>' + esc(h.hours) + '</dd><dt>Chat hours</dt><dd>' + esc(h.chatHours) + '</dd>';
+  }
+  return hasChat(h)
+    ? '<dt>Chat hours</dt><dd>' + esc(h.chatHours) + '</dd>'
+    : '<dt>Hours</dt><dd>' + esc(h.hours) + '</dd>';
+}
+/* ===== end FEATURE F19 ===== */
 
 /* ====================================================================
    FEATURE F7 — Hero card selection
@@ -415,18 +473,22 @@ function cardHtml(x, isHero) {
   (h.languages || []).forEach(l => tags.push('<span class="tag">' + esc(l) + '</span>'));
 
   const callCls = st.open ? 'btn btn-primary btn-block' : 'btn btn-secondary btn-block';
+  const chatMain = chatIsMain(h, st);   // F19
   let html = '<article class="hl-card' + (isHero ? ' hero' : '') + '">';
   if (isHero) html += '<p class="eyebrow">Talk to someone now</p>';
   html += '<h3 class="hl-name">' + esc(h.name) + '</h3>';
   html += '<div class="hl-tags">' + tags.join('') + '</div>';
-  html += '<a class="' + callCls + (isHero ? ' btn-lg' : '') + '" href="tel:' + esc(h.phone) + '">Call ' + esc(fmtPhone(h.phone)) + '</a>';
+  const mainCls = callCls + (isHero ? ' btn-lg' : '');
+  html += chatMain ? chatButtonHtml(h, mainCls) : callButtonHtml(h, mainCls);   // F19: main button
 
   const row = [];
+  if (chatMain && hasPhone(h)) row.push('<a class="btn btn-secondary" href="tel:' + esc(h.phone) + '">Call</a>');   // F19
+  if (!chatMain && hasChat(h)) row.push(chatButtonHtml(h, 'btn btn-secondary'));   // F19
   if (h.email) row.push('<a class="btn btn-secondary" href="mailto:' + esc(h.email) + '">Email</a>');
-  if (h.whatsapp) row.push('<a class="btn btn-secondary" href="https://wa.me/' + esc(h.whatsapp) + '" target="_blank" rel="noopener">WhatsApp</a>');
   if (row.length) html += '<div class="btn-row">' + row.join('') + '</div>';
 
-  let more = '<dt>Hours</dt><dd>' + esc(h.hours) + '</dd>';
+  let more = hoursRowsHtml(h);   // F19
+  if (chatMain && hasPhone(h)) more += '<dt>Phone</dt><dd><a href="tel:' + esc(h.phone) + '">' + esc(fmtPhone(h.phone)) + '</a></dd>';   // F19
   if (h.address) more += '<dt>Address</dt><dd>' + esc(h.address) + '</dd>';
   if (h.altPhone) more += '<dt>Other number</dt><dd><a href="tel:' + esc(h.altPhone) + '">' + esc(fmtPhone(h.altPhone)) + '</a></dd>';
   if (h.website) more += '<dt>Website</dt><dd><a href="' + esc(h.website) + '" target="_blank" rel="noopener">' + esc(h.website.replace(/^https?:\/\//, '')) + '</a></dd>';
@@ -584,7 +646,7 @@ document.getElementById('saveContactsBtn').addEventListener('click', () => {
   const n = DATA ? DATA.helplines.length : 0;
   setTimeout(() => showSheet(
     '<h3>Your phone will ask to add them</h3>' +
-    '<p>Tap “Add All” (or “Save”) when it appears. ' + (n ? n + ' numbers are' : 'The numbers are') +
+    '<p>Tap “Add All” (or “Save”) when it appears. ' + (n ? n + ' contacts are' : 'The contacts are') +
     ' saved as “Helpline – …”, so they are easy to find later, even without internet.</p>' +
     '<button class="btn btn-primary btn-block" id="sheetClose" type="button">Okay</button>'), 500);
 });
